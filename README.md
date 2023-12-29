@@ -1,30 +1,15 @@
-# ❌ | ⭕️ | ❌  Tic Tac Toe (React + TypeScript + Vite)
+# ❌ | ⭕️ | ❌  Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game built with React + TypeScript + Vite and with some Accessibility features
 
-Currently, two official plugins are available:
+- Use the screen reader to navigate and interact with the game.
+- The status of the game is announced correctly by the screen reader.
+- It can be played using keyboard navigation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Screenshots with Mac VoiceOver**
 
-## Expanding the ESLint configuration
+<img width="660" alt="Screenshot 2023-12-29 at 09 57 26" src="https://github.com/giodelabarrera/tictactoe/assets/1263588/3e9c7863-71cf-4747-aa84-f6af8e92e3ab">
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<img width="663" alt="Screenshot 2023-12-29 at 09 56 16" src="https://github.com/giodelabarrera/tictactoe/assets/1263588/0007efb5-f59f-4888-a781-64549dbff66b">
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img width="661" alt="Screenshot 2023-12-29 at 09 55 55" src="https://github.com/giodelabarrera/tictactoe/assets/1263588/ebda7c6c-ca1e-45ca-a4b7-dfd6532a6ecb">
