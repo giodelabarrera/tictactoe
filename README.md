@@ -1,4 +1,4 @@
-# ❌ | ⭕️ | ❌  Tic Tac Toe
+# ❎ | ❎ | ❎  Tic Tac Toe
 
 Game built with React + TypeScript + Vite and with some Accessibility features
 
