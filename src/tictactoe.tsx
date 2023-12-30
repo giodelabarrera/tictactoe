@@ -2,28 +2,11 @@ import { useState } from "react"
 import './tictactoe.css'
 
 type Player = 'X' | 'O'
-
 type Board = Map<PositionKey, Player | undefined>
 
 type PositionKey = '1_1' | '1_2' | '1_3' | '2_1' | '2_2' | '2_3' | '3_1' | '3_2' | '3_3';
-
 type RowValue = 1 | 2 | 3
-
 type ColumnValue = 1 | 2 | 3
-
-const POSITION_WINNING_LINES: Array<[PositionKey, PositionKey, PositionKey]> = [
-  // vertical
-  ['1_1', '1_2', '1_3'],
-  ['2_1', '2_2', '2_3'],
-  ['3_1', '3_2', '3_3'],
-  // horizontal
-  ['1_1', '2_1', '3_1'],
-  ['1_2', '2_2', '3_2'],
-  ['1_3', '2_3', '3_3'],
-  // diagonal
-  ['1_1', '2_2', '3_3'],
-  ['1_3', '2_2', '3_1'],
-]
 
 const INITIAL_PLAYER = 'X'
 
@@ -117,6 +100,19 @@ function getStatus(winner: Player | undefined, board: Board, player: Player) {
 }
 
 function determineWinner(board: Board) {
+  const POSITION_WINNING_LINES: Array<[PositionKey, PositionKey, PositionKey]> = [
+    // vertical
+    ['1_1', '1_2', '1_3'],
+    ['2_1', '2_2', '2_3'],
+    ['3_1', '3_2', '3_3'],
+    // horizontal
+    ['1_1', '2_1', '3_1'],
+    ['1_2', '2_2', '3_2'],
+    ['1_3', '2_3', '3_3'],
+    // diagonal
+    ['1_1', '2_2', '3_3'],
+    ['1_3', '2_2', '3_1'],
+  ]
   for (const winningLine of POSITION_WINNING_LINES) {
     const positionsToCheck = [
       board.get(winningLine[0]),
